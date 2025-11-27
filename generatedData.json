@@ -1,0 +1,129 @@
+[
+  {
+    "StepId": "s-00000001UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251127_100000",
+    "EndDateTime": "20251127_110000"
+  },
+  {
+    "StepId": "s-00000002UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251126_100000",
+    "EndDateTime": "20251126_110000"
+  },
+  {
+    "StepId": "s-00000002UVNJU8X2MF02",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251126_130000",
+    "EndDateTime": "20251126_180000"
+  },
+  
+  {
+    "StepId": "s-00000007UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251121_100000",
+    "EndDateTime": "20251121_110000"
+  },
+  {
+    "StepId": "s-00000008UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251120_100000",
+    "EndDateTime": "20251120_110000"
+  },
+  {
+    "StepId": "s-00000008UVNJU8X2MF02",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "FAILED",
+    "StartDateTime": "20251120_100000",
+    "EndDateTime": "20251120_110000"
+  },
+  {
+    "StepId": "s-00000009UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251119_100000",
+    "EndDateTime": "20251119_110000"
+  },
+  {
+    "StepId": "s-00000010UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251118_100000",
+    "EndDateTime": "20251118_110000"
+  },
+  {
+    "StepId": "s-00000011UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251117_100000",
+    "EndDateTime": "20251117_110000"
+  },
+  {
+    "StepId": "s-00000012UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251116_100000",
+    "EndDateTime": "20251116_110000"
+  },
+  {
+    "StepId": "s-00000013UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251115_100000",
+    "EndDateTime": "20251115_110000"
+  },
+  {
+    "StepId": "s-00000014UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251114_100000",
+    "EndDateTime": "20251114_110000"
+  },
+  {
+    "StepId": "s-00000015UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251113_100000",
+    "EndDateTime": "20251113_110000"
+  },
+  {
+    "StepId": "s-00000016UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251112_100000",
+    "EndDateTime": "20251112_110000"
+  },
+  {
+    "StepId": "s-00000017UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251111_100000",
+    "EndDateTime": "20251111_110000"
+  },
+  {
+    "StepId": "s-00000018UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251110_100000",
+    "EndDateTime": "20251110_110000"
+  },
+  {
+    "StepId": "s-00000019UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251109_100000",
+    "EndDateTime": "20251109_110000"
+  },
+  {
+    "StepId": "s-00000020UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "20251108_100000",
+    "EndDateTime": "20251108_110000"
+  }
+]

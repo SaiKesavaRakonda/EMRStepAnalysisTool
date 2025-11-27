@@ -1,0 +1,12 @@
+boto3
+numpy
+pandas
+pyarrow
+streamlit==1.50.0
+tzlocal
+langchain
+langchain-openai
+pydantic --only-binary :all:
+dotenv
+langchain-community
+#chromadb --only-binary :all:
