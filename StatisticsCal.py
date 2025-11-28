@@ -49,18 +49,51 @@ def get_stats(emr_state_info):
     agent = create_agent(
         model=llm,
         response_format=ToolStrategy(OutputFormat),
+        cache=None 
     )
     json_list = json.dumps(emr_state_info)
     # Invoke agent
     result = agent.invoke({
-        
-        "messages": [{"role": "user", "content": f"Consider your self as a Data Analyst and based on following data {json_list} get the summary as follows\
-                      total_executions: int\
-                        Successful_executions: int\
-                        failed_executions: int\
-                        frequency: str (get full explanation like if daily what time if weekly what day if monthly which day of month, exclude outliers if any) \
-                        avg_execution_time_mins: int (exclude outliers if any)\
-                      outlier_count: int (This include failed executions, executions took exceptionlly high time, not started as per schedule)"}]
+     
+    "messages": [{
+    "role": "user",
+    "content": f"""
+        You are a senior data analyst. Analyze the following EMR execution history JSON data:
+
+        {json_list}
+
+        Your tasks:
+
+        1. Determine execution frequency.
+        - If executions occur approximately every 7 days, classify as weekly.
+        - When identifying weekly patterns, you MUST get Weekday from ExecutionWeekDay parameter
+        2. Calculate the average execution time in minutes (`avg_execution_time_mins`) with these rules:
+        - Only include steps with `ExecutionStatus` = "COMPLETED".
+        - Exclude steps that have missing `StartDateTime` or `EndDateTime`.
+        - Exclude outliers. Define outliers as steps where the duration is more than 1.5 times the interquartile range (IQR) above the third quartile or below the first quartile.
+        - Compute duration as the difference between `EndDateTime` and `StartDateTime` in **minutes**.
+        - Return the **average** of the filtered durations as `avg_execution_time_mins`.
+
+        3. Produce a summary with the following fields (strict schema):
+
+        - total_executions: Total number of executions.
+        - Successful_executions: Count with ExecutionStatus = COMPLETED.
+        - failed_executions: Count with non-COMPLETED status.
+        - frequency:
+            • Daily → include typical execution time.
+            • Weekly → include the correct weekday and time (from ExecutionWeekDay)
+            • Monthly → include day of month + time
+            Exclude outliers when determining frequency.
+        - avg_execution_time_mins: Average duration in minutes, excluding failures and outliers.(refer above calculated avg_execution_time_mins)
+        - outlier_count: Count of failed executions, abnormal durations, schedule deviations.
+
+        STRICT RULE:  
+            When determining weekly execution day, infer it directly from ExecutionWeekDay.
+            Don't assume any data
+        Only return values for the defined fields. No additional text.
+        """
+        }]
+
     })
 
     

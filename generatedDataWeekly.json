@@ -1,0 +1,162 @@
+[
+  {
+    "StepId": "s-00000001UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:11:28T10:00:00",
+    "EndDateTime": "2025:11:28T11:05:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000002UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:11:21T10:03:00",
+    "EndDateTime": "2025:11:21T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000003UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:11:14T10:00:00",
+    "EndDateTime": "2025:11:14T10:40:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000004UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:11:07T10:00:00",
+    "EndDateTime": "2025:11:07T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000005UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:10:31T10:00:00",
+    "EndDateTime": "2025:10:31T18:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000006UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:10:24T10:00:00",
+    "EndDateTime": "2025:10:24T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000007UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:10:17T10:00:00",
+    "EndDateTime": "2025:10:17T21:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000008UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:10:10T10:00:00",
+    "EndDateTime": "2025:10:10T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000009UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:10:03T10:00:00",
+    "EndDateTime": "2025:10:03T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000010UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:09:26T10:00:00",
+    "EndDateTime": "2025:09:26T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000011UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:09:19T10:00:00",
+    "EndDateTime": "2025:09:19T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000012UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:09:12T10:00:00",
+    "EndDateTime": "2025:09:12T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000013UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:09:05T10:00:00",
+    "EndDateTime": "2025:09:05T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000014UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:08:29T10:00:00",
+    "EndDateTime": "2025:08:29T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000015UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:08:22T10:00:00",
+    "EndDateTime": "2025:08:22T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000016UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:08:15T10:00:00",
+    "EndDateTime": "2025:08:15T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000017UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:08:08T10:00:00",
+    "EndDateTime": "2025:08:08T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000018UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:08:01T10:00:00",
+    "EndDateTime": "2025:08:01T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000019UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:07:25T10:00:00",
+    "EndDateTime": "2025:07:25T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  },
+  {
+    "StepId": "s-00000020UVNJU8X2MF00",
+    "StepName": "Batch3-CSVtoParquet",
+    "ExecutionStatus": "COMPLETED",
+    "StartDateTime": "2025:07:18T10:00:00",
+    "EndDateTime": "2025:07:18T11:00:00",
+    "ExecutionWeekDay": "Friday"
+  }
+]

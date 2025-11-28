@@ -9,23 +9,40 @@ config.read("awsconfig.ini")
 emr = boto3.client("emr", verify=False)
 
 def fetch_step_metadata(keyword):
-    clusters = emr.list_clusters(ClusterStates=['RUNNING','WAITING','TERMINATED'])["Clusters"]
-    
+
     all_steps = []
-    for c in clusters:
-        steps = emr.list_steps(ClusterId=c["Id"])["Steps"]
-        for step in steps:
-            if keyword.lower() in step["Name"].lower():
-                required_details ={}
-                detail = emr.describe_step(ClusterId=c["Id"], StepId=step["Id"])
-                required_details["StepId"] = step["Id"]
-                required_details["StepName"]=detail['Step']['Name']
-                required_details["ExecutionStatus"]=detail['Step']['Status']['State']
-                required_details["StartDateTime"]=detail['Step']['Status']['Timeline']['StartDateTime'].strftime("%Y:%m:%dT%H:%M:%S")
-                required_details["EndDateTime"]=detail['Step']['Status']['Timeline']['EndDateTime'].strftime("%Y:%m:%dT%H:%M:%S")
-                all_steps.append(required_details)
-    
-    #bucket,s3_key = write_S3(keyword,all_steps)
+    # -------------------------------
+    # Paginator for list_clusters
+    # -------------------------------
+    cluster_paginator = emr.get_paginator("list_clusters")
+    for cluster_page in cluster_paginator.paginate(ClusterStates=['RUNNING','WAITING','TERMINATED']):
+        clusters = cluster_page.get("Clusters", [])
+
+        # -------------------------------
+        # Paginator for list_steps per cluster
+        # -------------------------------
+        for c in clusters:
+            step_paginator = emr.get_paginator("list_steps")
+            for step_page in step_paginator.paginate(ClusterId=c["Id"]):
+                steps = step_page.get("Steps", [])
+
+                for step in steps:
+                    if keyword.lower() in step["Name"].lower():
+                        detail = emr.describe_step(ClusterId=c["Id"], StepId=step["Id"])
+                        timeline = detail['Step']['Status'].get('Timeline', {})
+
+                        required_details = {
+                            "StepId": step["Id"],
+                            "StepName": detail['Step']['Name'],
+                            "ExecutionStatus": detail['Step']['Status']['State'],
+                            "StartDateTime": timeline.get('StartDateTime').strftime("%Y-%m-%dT%H:%M:%S") if timeline.get('StartDateTime') else None,
+                            "EndDateTime": timeline.get('EndDateTime').strftime("%Y-%m-%dT%H:%M:%S") if timeline.get('EndDateTime') else None,
+                            "ExecutionWeekDay": timeline.get('StartDateTime').strftime("%A") if timeline.get('StartDateTime') else None
+                        }
+
+                        all_steps.append(required_details)
+
+
     return all_steps
 
 

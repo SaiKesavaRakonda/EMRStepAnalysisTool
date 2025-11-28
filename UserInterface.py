@@ -1,7 +1,7 @@
 import streamlit as st
-from StatisticsCal import get_stats,get_summary
+from bedrockInvoker import get_stats,get_summary
 from GetEMRStepDetails import fetch_step_metadata, getAwsAccountdetails
-
+import json
 st.title("Welcome to EMR Step Analyzer")
 
 
@@ -19,6 +19,7 @@ keyword = st.text_input("Enter Step Name Keyword")
 
 if st.button("Fetch Stats"):
     emr_state_info = fetch_step_metadata(keyword)
+    #emr_state_info = json.load(open("generatedDataWeekly.json", "r"))
     stats = get_stats(emr_state_info)
     
     # Store in session state
