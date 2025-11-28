@@ -11,7 +11,7 @@ from langchain_core.documents import Document"""
 
 from GetEMRStepDetails import load_json_array_from_s3
 from pydantic import BaseModel
-import dotenv
+import dotenv, json
 import ssl
 import httpx
 
@@ -35,7 +35,7 @@ class queryResultFormat(BaseModel):
         
 
 
-def get_stats(s3_bucket_name,s3_file_key):
+def get_stats(emr_state_info):
     # Initialize LLM
     llm = ChatOpenAI(
         model="gpt-oss-20b:free",
@@ -50,7 +50,7 @@ def get_stats(s3_bucket_name,s3_file_key):
         model=llm,
         response_format=ToolStrategy(OutputFormat),
     )
-    json_list = load_json_array_from_s3(s3_bucket_name,s3_file_key)
+    json_list = json.dumps(emr_state_info)
     # Invoke agent
     result = agent.invoke({
         
@@ -69,7 +69,7 @@ def get_stats(s3_bucket_name,s3_file_key):
 
 
 
-def get_summary(query,s3_bucket_name,s3_file_key):
+def get_summary(query,emr_state_info):
     # Initialize LLM
     llm = ChatOpenAI(
         model="gpt-oss-20b:free",
@@ -85,7 +85,7 @@ def get_summary(query,s3_bucket_name,s3_file_key):
 
         response_format=ToolStrategy(queryResultFormat),
     )
-    json_list = load_json_array_from_s3(s3_bucket_name,s3_file_key)
+    json_list = json.dumps(emr_state_info)
     # Invoke agent
     result = agent.invoke({
         

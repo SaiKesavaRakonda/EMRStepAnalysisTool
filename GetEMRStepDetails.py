@@ -25,8 +25,8 @@ def fetch_step_metadata(keyword):
                 required_details["EndDateTime"]=detail['Step']['Status']['Timeline']['EndDateTime'].strftime("%Y:%m:%dT%H:%M:%S")
                 all_steps.append(required_details)
     
-    bucket,s3_key = write_S3(keyword,all_steps)
-    return bucket,s3_key
+    #bucket,s3_key = write_S3(keyword,all_steps)
+    return all_steps
 
 
 def write_S3(keyword,steps_json):
